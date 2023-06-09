@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+
+<div class="container-fluid d-flex flex-column min-vh-100">
+
+    <body>
+        <!-- Navigation bar   -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 fixed-top">
+            <a class="navbar-brand" href="https://deborahakpoguma.github.io/PortfolioSite-GitHub/index.html">Deborah
+                Akpoguma</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-5">
+                    <a class="nav-item nav-link"
+                        href="https://deborahakpoguma.github.io/PortfolioSite-GitHub/index.html">About Me </a>
+                    <a class="nav-item nav-link"
+                        href="https://deborahakpoguma.github.io/PortfolioSite-GitHub/portfolio.html">Portfolio</a>
+                    <a class="nav-item nav-link" href="mailto:deborahakpoguma@gmail.com">Contact Me</a>
+                </div>
+            </div>
+        </nav>
+
+        <div style="padding-top: 70px;"></div>
+        <!-- Navigation bar   -->
+
+        <!-- Website Text -->
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <h2><b>Introduction</b></h2>
+                    <p>The purpose of this project is to perform data analysis on a dataset containing employee
+                        information. By utilizing SQL queries, we aim to gain insights into various aspects of the
+                        employees' demographics, employment history, and termination details. This analysis can provide
+                        valuable information to human resources departments, management teams, or any stakeholders
+                        interested in understanding the composition and dynamics of the employee workforce.
+                    </p>
+
+                    <b>Target Audience</b>
+                    <p>Human resources departments, management teams, and stakeholders interested in analyzing employee
+                        data.
+                    </p>
+
+                    <b>Data and Code</b>
+                    <p>
+                    <ul>
+                        <li> The data used in this project can be found <a
+                                href="https://www.kaggle.com/datasets/HRAnalyticRepository/employee-attrition-data"
+                                target="_blank">here</a>.</li>
+                        <li>The SQL queries used to obtain the results can be found <a target="_blank"
+                                href="https://github.com/DeborahAkpoguma/Portfolio/blob/main/SQL/Project%204/Employee%20Data%20Analysis.sql">here</a>.
+                        </li>
+                    </ul>
+                    The dataset was imported into SQL where the data was explored and analayzed.
+                    </p>
+                    There are 17 columns in this dataset
+                    <ul>
+
+                        <li><b>employee id</b>: The ID of the employee. Values are integers. There are no missing
+                            values.</li>
+                        <li><b>employee record date</b>: The date the record was collected. All values are
+                            datetime. There were no missing values.</li>
+                        <li><b>birth date</b>: The birth date of the employee. All values were imported as text and
+                            converted to datetime. There were no
+                            missing values.</li>
+                        <li><b>hire date</b>: The date the employee was hired. All values were imported as text and
+                            converted to datetime. There were no
+                            missing values.</li>
+                        <li><b>termination date</b>: The employee's last day of work. All values were imported as text
+                            and
+                            converted to datetime. There were
+                            no missing values. All active employees have a termination date of '1900-01-01'.</li>
+                        <li><b>age </b> (years): The age of the employee. All values ware integers. There were no
+                            missing
+                            values.
+                        </li>
+                        <li><b>length of service</b> (years): How long the employee has worked for the company. All
+                            values
+                            are integers. There were no missing values. </li>
+                        <li><b>city</b>: The location of the store the employee works/worked at. All values are text.
+                            There were
+                            no missing values.</li>
+                        <li><b>department</b>: The department the employee works/worked in. All values are text. There
+                            were
+                            no missing values.</li>
+                        <li><b>job title</b>: The job title of the employee. All values are text. There were
+                            no missing values. </li>
+                        <li><b>store number</b>: The number of the store the employee works/worked at. All values are
+                            integers.
+                            There were
+                            no missing values.</li>
+                        <li><b>gender</b>: The gender of the employee. All values are text. There were
+                            no missing values.</li>
+                        <li><b>termination reason</b>: Reason the employee was terminated. All values are text. There
+                            were
+                            no missing values. The termination reason for all active employees is 'Not Applicable'.
+                        </li>
+                        <li><b>termination type</b>: The type of termination of the employee. All values are text. There
+                            were
+                            no missing values. The termination type for all active employees is 'Not Applicable'. </li>
+                        <li><b>status year</b>: The year the employee status was recorded. All values are integer. There
+                            were no missing
+                            values.</li>
+                        <li><b>status</b>: Current employment status of the employee. All values are text. There were
+                            no missing values. </li>
+                        <li><b>business unit</b>: The unit the employee works/worked in. All values are text. There were
+                            no missing values.</li>
+                    </ul>
+                    </p>
+
+                    <b>Questions to be Answered</b>
+                    <ol>
+                        <li>How many employees work or have worked for the company?</li>
+                        <li>What is the distribution of employees across different cities, departments, and job titles?
+                        </li>
+                        <li>What is the overall gender ratio in the workforce?</li>
+                        <li>What is the average age and length of service for employees? </li>
+                        <li>What percentage of employees have stayed longer than the average length of service?</li>
+                        <li>How many employees were terminated in each year? What are the most common termination
+                            reasons and types?</li>
+                        <li>How does employee turnover rate change over the years?</li>
+                        <li>Are there any relationships between employee attributes such as age, gender, or job title,
+                            and the termination reason?</li>
+                        <li>Are there any company-wide hiring trends over the years?</li>
+                    </ol>
+
+                    <h1>Data Cleaning</h1>
+                    <ol>
+                        <li> The following columns were modified to ensure all columns had the appropriate datatype:
+                            <ul>
+                                <li>birthdate_key</li>
+                                <li>orighiredate_key</li>
+                                <li>terminationdate_key</li>
+                            </ul>
+                        </li>
+
+                        <li>Some job titles were inconsistent and were updated to ensure consistency:
+                            <ul>
+                                <li>Director</li>
+                                <li>Executive Assistant</li>
+                                <li>VP</li>
+                                <li>Chief Information Officer</li>
+                            </ul>
+                        </li>
+
+                    </ol>
+
+
+                    <h1>Data Analysis</h1>
+                    <ol>
+                        <!-- Number of employees -->
+                        <li><b>Number of Employees in the Dataset</b>: There are <b>6,284</b> unique employees (active
+                            and
+                            terminated) in the dataset.
+
+                            <div><img style="width: 400px;" src="public/images/project-four/no-of-employees-query.png"
+                                    alt="image showing sql query to generate the number of employees"> </div>
+                            <div>
+                                <img style="width: 400px;" src="public/images/project-four/no-of-employees result.png"
+                                    alt="image showing the result of an sql query to generate the number of employees ">
+                            </div> <br>
+
+
+                        </li>
+                        <!-- Distribution of employees across different cities, departments, and job title -->
+                        <li><b>Distribution of Employees Across Cities, Departments, and, Job Titles</b>:
+                            <br>
+                            <ul> <!-- Distribution of Employees Across Cities -->
+                                <li><b>Distribution of Employees Across Cities</b>: Employees (active and terminated)
+                                    are
+                                    located
+                                    in <b>40</b> cities. The city with the most employees is <b>Vancouver</b> (1392) and
+                                    the city with
+                                    the
+                                    least
+                                    employees is <b>Blue River</b> (1).
+                                    <div><img style="width: 850px;" src="/public/images/project-four/d_city-desc.png"
+                                            alt="result showing the 6 cities with the highest number of employees">
+                                    </div>
+                                    <br>
+                                    <div><img style="width: 850px;" src="/public/images/project-four/d_city-asc.png"
+                                            alt="result showing the 6 cities with the least number of employees"></div>
+                                    <br>
+                                </li>
+                                <!-- Distribution of Employees Across Departments  -->
+                                <li><b>Distribution of Employees Across Departments</b>: There are <b>21</b> departments
+                                    listed
+                                    in the
+                                    dataset. The department with the most employees is <b>Meats</b> (1252) and the
+                                    deparment
+                                    with the
+                                    least
+                                    employees is <b>Legal </b> (3). This analysis includes active and terminated
+                                    employees.
+                                    <div><img style="width: 850px;" src="/public/images/project-four/d_dept_desc.png"
+                                            alt="result showing the 6 cities with the highest number of employees">
+                                    </div>
+                                    <br>
+                                    <div><img style="width: 850px;" src="/public/images/project-four/d_dept_asc.png"
+                                            alt="result showing the 6 cities with the least number of employees"></div>
+                                    <br>
+                                </li>
+                                <!-- Distribution of Employees Across Job Titles  -->
+                                <li><b>Distribution of Employees Across Job Titles</b>: There are 32 job titles listed
+                                    in the
+                                    dataset. The job title held by the most employees is <b>Meat Cutter</b> (1218) and
+                                    the job
+                                    titles held by fewest employees are <b>CEO</b> (1), <b>Legal Counsel</b> (1),
+                                    <b>Chief Informatin
+                                        Officer</b> (1), and <b>Dairy Manager</b> (1). This analysis includes active and
+                                    terminated employees.
+                                    <div><img style="width: 850px;" src="/public/images/project-four/d_job_desc.png"
+                                            alt="result showing the 6 cities with the highest number of employees">
+                                    </div>
+                                    <br>
+                                    <div><img style="width: 850px;" src="/public/images/project-four/d_job_asc.png"
+                                            alt="result showing the 6 cities with the least number of employees"></div>
+                                </li>
+                            </ul>
+                        </li> <br>
+
+                        <li><b>Overall Gender Ratio in the Workforce</b> (active and terminated): There are <b>3006</b>
+                            males
+                            and <b>3278</b> females in the workforce.
+                            <div><img style="width: 300px;" src="/public/images/project-four/gender.png"
+                                    alt="sql query result showing number of each gender in workforce "></div>
+                        </li> <br>
+
+                        <!-- Average age and length of service for employees -->
+                        <li><b>Average Age and Length of Service</b> (active and terminated): The average age of
+                            employees is <b>45</b> years and the average length of service is approximately <b>12.84
+                            </b> years.
+                        </li> <br>
+
+                        <!-- Grouping Employees by Average Length of Service -->
+                        <li><b>Percentage of Employees Below and Above Average Length of Service</b> (active and
+                            terminated): <b>54.09</b>% of employees have a length of service above the average (12.84
+                            years)
+                            length of service and <b>45.91</b>% of employees have an average below the average. </li>
+                        <br>
+
+                        <!-- Termination Analysis -->
+                        <li> <b>Number of Employees Terminated Each Year</b>: There are a total of <b>1485</b>
+                            terminated
+                            employees in the dataset. <b>2014</b> is the year with the most terminated
+                            employees (253) and <b>2013</b> is the year with the least terminated employees (105).
+                            <div> <img style="width: 300px;" src="/public/images/project-four/terminated-year.png"
+                                    alt="result of sql query showing terminated employees by year"></div> <br>
+
+                            <ul>
+                                <li><b>Most Common Termination Reasons</b>: The termination reasons listed in the
+                                    dataset are 'Resignation', 'Retirement', and 'Layoff'.
+                                </li>
+                                <div> <img style="width: 300px;" src="public/images/project-four/term-reason.png"
+                                        alt="result of sql query showing termination reasons by number of employees">
+                                </div> <br>
+                                <li><b>Most Common Termination Types</b>: The two termination types provided in the
+                                    dataset are 'Voluntarily' and 'Involuntarily'.</li>
+                                <div><img style="width: 300px;" src="public/images/project-four/term-type.png"
+                                        alt="result of sql query showing termination types by number of employees">
+                                </div>
+                                <br>
+                            </ul>
+                        </li> <br>
+
+                        <!-- Employee Turnover Rate-->
+                        <li><b>Employee Turnover Rate by Year</b>: The year with the largest employee turnover rate was
+                            <b>2014</b> (5.10%). The year with the smallest employee turnover rate was <b>2013</b>
+                            (2.01%). This matches the numbers gotten from the number of employee terminations by year
+                            analaysis: 2014 had the highest number of
+                            employee terminations and 2013 had the lowest number of employee terminations.
+                        </li>
+                        <div><img style="width: 550px;" src="/public/images/project-four/turnover-rate.png"
+                                alt="image showing employee turn over rate over the years"></div>
+                        <br>
+
+                        <!-- Relationships between employee attributes (age, gender, department) and termination reason -->
+                        <li><b>Relationships between Age, Gender, Department and Termination Reason</b>
+                            <ul>
+                                <li><b>Age</b>:
+                                    <ul>
+                                        <li> The <b>20 - 30</b> age group had the most number of layoffs and the
+                                            <b>60+</b> age group had the
+                                            least number of layoffs.
+                                        </li>
+                                        <li>The <b>20 - 30</b> age group had the most number of resignations and the
+                                            <b>60+</b> age group had the
+                                            least number of resignations.
+                                        </li>
+                                        <li>Only people over <b>50</b> years of age have retirement as a termination
+                                            reason.</li>
+                                    </ul>
+                                    <div><img style="width: 300px;" src="/public/images/project-four/term_age.png"
+                                            alt="image showing number of employees terminated by age"></div>
+                                </li> <br>
+
+                                <li><b>Gender</b>:
+                                    <ul>
+                                        <li>The frequency of layoffs between males and females is similar.</li>
+                                        <li>Females have a higher frequency of resignation and retirement.</li>
+                                    </ul>
+                                    <div><img style="width: 300px;" src="/public/images/project-four/term_gender.png"
+                                            alt="image showing number of employees terminated by gender"></div>
+                                </li> <br>
+
+                                <li><b>Department</b>
+                                    <ul>
+                                        <li>
+                                            All three termination reasons are more frequent in the retail departments
+                                            compared to the corporate departments.
+                                        </li>
+                                    </ul>
+                                    <div><img style="width: 300px;" src="/public/images/project-four/term_dept_one.png"
+                                            alt="image showing number of employees terminated by department"></div> <br>
+                                    <div><img style="width: 300px;" src="/public/images/project-four/term_dept_two.png"
+                                            alt="image showing number of employees terminated by department"></div>
+                                </li>
+                            </ul>
+                        </li> <br>
+
+
+                        <!-- Hiring Trends -->
+                        <li><b>Hiring Trends Over The Years</b>
+                            <ul>
+                                <li>The number of active employees in the company increased from <b>2006 - 2013</b>, but
+                                    decresed in <b>2014 and 2015</b>.</li>
+                            </ul>
+                            <div><img style="width: 500px;" src="/public/images/project-four/employee_growth.png"
+                                    alt=""></div>
+                        </li>
+
+                    </ol>
+
+                    <!-- <h1>Data Visualization</h1> -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Website Text -->
+
+        <div style="padding-bottom: 70px;"></div>
+        <!-- footer -->
+        <div style="padding-top: 70px;"></div>
+        <footer class="fixed-bottom mt-5 bg-white d-flex justify-content-center">
+            <div class="container text-center">
+                <div class="row flex-column flex-md-row">
+                    <div class="col-md-4">
+                        <b>Email: </b>
+                        <a href="mailto:deborahakpoguma@gmail.com" class="text-dark font-bold mb-2">
+                            deborahakpoguma@gmail.com
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://www.linkedin.com/in/deborah-akpoguma-771b02186/" target="_blank">
+                            <img src="public/images/linkedin-logo.png" alt="LinkedIn" width="30" height="30">
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="https://github.com/DeborahAkpoguma/Portfolio-Guide" target="_blank">
+                            <img src="public/images/github-logo.png" alt="GitHub" width="30" height="30">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- footer -->
+
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+            crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+    </body>
+</div>
+
+</html>
